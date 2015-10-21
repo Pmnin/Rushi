@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Rushi!
+
+Par Pierrick Michel
+Novembre 2014
+Sur Unity 3D
+
+STATIC LEVELS
+ -->
+ 
+ <!-- Level Seven -->
+ 
+ <level name="Seven" number="7" width="5" height="5">
+	<blocks>
+		<block type="static" row="0" column="0"/>
+		<block type="static" row="0" column="1"/>
+		<block type="static" row="0" column="2"/>
+		<block type="static" row="0" column="3"/>
+		<block type="static" row="0" column="4"/>
+		
+		<block type="static" row="1" column="0"/>
+		<block type="void" row="1" column="1"/>
+		<block type="void" row="1" column="2"/>
+		<block type="void" row="1" column="3"/>
+		<block type="static" row="1" column="4"/>
+		
+		<block type="static" row="2" column="0"/>
+		<block type="void" row="2" column="1"/>
+		<block type="death" row="2" column="2"/>
+		<block type="void" row="2" column="3"/>
+		<block type="static" row="2" column="4"/>
+		
+		<block type="static" row="3" column="0"/>
+		<block type="end" row="3" column="1"/>
+		<block type="void" row="3" column="2"/>
+		<block type="start" row="3" column="3"/>
+		<block type="static" row="3" column="4"/>
+		
+		<block type="static" row="4" column="0"/>
+		<block type="static" row="4" column="1"/>
+		<block type="static" row="4" column="2"/>
+		<block type="static" row="4" column="3"/>
+		<block type="static" row="4" column="4"/>
+		
+	</blocks>
+</level>
