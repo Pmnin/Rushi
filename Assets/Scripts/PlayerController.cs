@@ -5,14 +5,14 @@ public class PlayerController : MonoBehaviour {
 	public float xSpeed;
 	public float ySpeed;
 
-	private bool jumping;
+	//private bool jumping;
 	private bool doubleJumping;
 
 	private Vector3 movement;
 
 	// Use this for initialization
 	void Start () {
-		jumping = false;
+		//jumping = false;
 		doubleJumping = false;
 	}
 
@@ -24,16 +24,18 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate(){
 
 		if (isGrounded ()) {
-			jumping = false;
+			//jumping = false;
+			Debug.Log ("Can't Jump!");
+
 			doubleJumping = true;
 		}
 
 		if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey (KeyCode.RightArrow) || Input.GetKey(KeyCode.Space)){
 			if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey (KeyCode.RightArrow)) {
-				movement = new Vector3(Input.GetAxis ("Horizontal") * xSpeed,rigidbody.velocity.y,rigidbody.velocity.z);
+				movement = new Vector3(Input.GetAxis ("Horizontal") * xSpeed,GetComponent<Rigidbody>().velocity.y,GetComponent<Rigidbody>().velocity.z);
 
 				//Debug.Log(Input.GetAxis("Horizontal"));
-				rigidbody.velocity = movement;
+				GetComponent<Rigidbody>().velocity = movement;
 			}
 
 			if (Input.GetKeyDown(KeyCode.Space) && (isGrounded () || doubleJumping)) {
@@ -43,10 +45,10 @@ public class PlayerController : MonoBehaviour {
 					doubleJumping = false;
 				}
 
-				movement = new Vector3(rigidbody.velocity.x,Input.GetAxis("Jump") * ySpeed,rigidbody.velocity.z);
+				movement = new Vector3(GetComponent<Rigidbody>().velocity.x,Input.GetAxis("Jump") * ySpeed,GetComponent<Rigidbody>().velocity.z);
 
 				//Debug.Log (Input.GetAxis ("Jump"));
-				rigidbody.velocity = movement;
+				GetComponent<Rigidbody>().velocity = movement;
 			}
 
 		}

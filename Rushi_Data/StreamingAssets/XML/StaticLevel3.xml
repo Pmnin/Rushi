@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Rushi!
+
+Par Pierrick Michel
+Novembre 2014
+Sur Unity 3D
+
+STATIC LEVELS
+ -->
+ 
+ <!-- Level Three -->
+ 
+ <level name="Three" number="3" width="10" height="8">
+	<blocks>
+		<block type="static" row="0" column="0"/>
+		<block type="static" row="0" column="1"/>
+		<block type="static" row="0" column="2"/>
+		<block type="static" row="0" column="3"/>
+		<block type="death" row="0" column="4"/>
+		<block type="static" row="0" column="5"/>
+		<block type="static" row="0" column="6"/>
+		<block type="static" row="0" column="7"/>
+		<block type="static" row="0" column="8"/>
+		<block type="static" row="0" column="9"/>
+		
+		<block type="static" row="1" column="0"/>
+		<block type="end" row="1" column="1"/>
+		<block type="static" row="1" column="2"/>
+		<block type="void" row="1" column="3"/>
+		<block type="void" row="1" column="4"/>
+		<block type="void" row="1" column="5"/>
+		<block type="void" row="1" column="6"/>
+		<block type="void" row="1" column="7"/>
+		<block type="start" row="1" column="8"/>
+		<block type="static" row="1" column="9"/>
+		
+		<block type="void" row="2" column="0"/>
+		<block type="static" row="2" column="1"/>
+		<block type="static" row="2" column="2"/>
+		<block type="void" row="2" column="3"/>
+		<block type="static" row="2" column="4"/>
+		<block type="void" row="2" column="5"/>
+		<block type="void" row="2" column="6"/>
+		<block type="void" row="2" column="7"/>
+		<block type="static" row="2" column="8"/>
+		<block type="void" row="2" column="9"/>
+
+		<block type="void" row="3" column="0"/>
+		<block type="static" row="3" column="1"/>
+		<block type="void" row="3" column="2"/>
+		<block type="void" row="3" column="3"/>
+		<block type="void" row="3" column="4"/>
+		<block type="void" row="3" column="5"/>
+		<block type="void" row="3" column="6"/>
+		<block type="void" row="3" column="7"/>
+		<block type="static" row="3" column="8"/>
+		<block type="void" row="3" column="9"/>
+			
+		<block type="void" row="4" column="0"/>
+		<block type="void" row="4" column="1"/>
+		<block type="static" row="4" column="2"/>
+		<block type="static" row="4" column="3"/>
+		<block type="void" row="4" column="4"/>
+		<block type="static" row="4" column="5"/>
+		<block type="void" row="4" column="6"/>
+		<block type="static" row="4" column="7"/>
+		<block type="void" row="4" column="8"/>
+		<block type="void" row="4" column="9"/>
+		
+		<block type="void" row="5" column="0"/>
+		<block type="void" row="5" column="1"/>
+		<block type="static" row="5" column="2"/>
+		<block type="void" row="5" column="3"/>
+		<block type="void" row="5" column="4"/>
+		<block type="static" row="5" column="5"/>
+		<block type="death" row="5" column="6"/>
+		<block type="static" row="5" column="7"/>
+		<block type="void" row="5" column="8"/>
+		<block type="void" row="5" column="9"/>
+		
+		<block type="void" row="6" column="0"/>
+		<block type="void" row="6" column="1"/>
+		<block type="void" row="6" column="2"/>
+		<block type="static" row="6" column="3"/>
+		<block type="void" row="6" column="4"/>
+		<block type="void" row="6" column="5"/>
+		<block type="static" row="6" column="6"/>
+		<block type="void" row="6" column="7"/>
+		<block type="void" row="6" column="8"/>
+		<block type="void" row="6" column="9"/>
+		
+		<block type="void" row="7" column="0"/>
+		<block type="void" row="7" column="1"/>
+		<block type="void" row="7" column="2"/>
+		<block type="static" row="7" column="3"/>
+		<block type="end" row="7" column="4"/>
+		<block type="end" row="7" column="5"/>
+		<block type="static" row="7" column="6"/>
+		<block type="void" row="7" column="7"/>
+		<block type="void" row="7" column="8"/>
+		<block type="void" row="7" column="9"/>
+	</blocks>
+ </level>

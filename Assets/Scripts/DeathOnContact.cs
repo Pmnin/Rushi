@@ -8,7 +8,7 @@ public class DeathOnContact : MonoBehaviour {
 
 			//Respawn at StartBlock
 			other.transform.position = GameObject.FindWithTag("StartBlock").transform.position;
-			other.rigidbody.velocity = new Vector3 (0,0,0);
+			other.GetComponent<Rigidbody>().velocity = new Vector3 (0,0,0);
 		}
 	}
 }

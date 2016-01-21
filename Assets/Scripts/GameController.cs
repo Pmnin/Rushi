@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using System.Xml.Serialization;
 
 using System.IO;
@@ -21,6 +22,8 @@ public class GameController : MonoBehaviour {
 	public GUIText chronoText;
 	private int chronoTime;
 
+	public GUIText filePathText;
+
 	public GUIText gameoverText;
 
 	private bool gameState;
@@ -37,6 +40,8 @@ public class GameController : MonoBehaviour {
 		chronoTime = -1;
 
 		loadLevel (levelNumber);
+
+		filePathText.text = UnityEngine.Application.persistentDataPath;
 	}
 	
 	// Update is called once per frame
@@ -137,7 +142,7 @@ public class GameController : MonoBehaviour {
 		}
 		
 		player.transform.position = new Vector3(0,0);
-		player.rigidbody.velocity = new Vector3 (0, 0, 0);
+		player.GetComponent<Rigidbody>().velocity = new Vector3 (0, 0, 0);
 	}
 
 	void endGame(){
@@ -149,18 +154,17 @@ public class GameController : MonoBehaviour {
 	}
 
 	void readXml(int levelNumber){
-		System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer (typeof(Level));
+
+		//MÉTHODE WINDOWS
+
+		var serializer = new System.Xml.Serialization.XmlSerializer (typeof(Level));
 
 		serializer.UnknownNode += new System.Xml.Serialization.XmlNodeEventHandler(serializer_UnknownNode);
 		serializer.UnknownAttribute += new System.Xml.Serialization.XmlAttributeEventHandler (serializer_UnknownAttribute);
 
-		FileStream fs = new FileStream ("./Assets/XML/StaticLevel" + levelNumber + ".xml", FileMode.Open);
+		var fs = new FileStream(UnityEngine.Application.streamingAssetsPath + "/XML/StaticLevel" + levelNumber + ".xml",FileMode.Open);
 
-		level = (Level)serializer.Deserialize (fs);
-
-		//Entrer les informations dans l'array
-
-		//Créer des instances de blocks selon l'array avec les prefabs
+		level = serializer.Deserialize (fs) as Level;
 
 	}
 
